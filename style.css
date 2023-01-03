@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bigHero {
+  width: 100%;
+  height: 50vh;
+  background-image: url('image/bigHeroPizza2.jpg');
+  background-size: cover;
+  background-position: center left;
+}
+
+.bigHero h1 {
+  margin-left: 600px;
+  padding: 50px 0px 0px 40px; /* top right bottom left*/
+  color: black;
+  font-size: 40px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+}
+
+/*menu section*/
+.section1Leftside {
+  width: 50%;
+  text-align: center;
+  background-color: #f9eec9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.section2Rightside {
+  width: 50%;
+  padding: 40px 0px;
+}
+
+.section2Rightside h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.toppingOrderside {
+  margin: 20px 0px;
+}
+
+.pizzaBox {
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
+
+.pizzaBox img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.topping {
+  margin: 30px 0px;
+}
+/*mainBox control whole right side*/
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+}
+#quantityBox {
+  width: 200px;
+  height: 30px;
+}
+
+#crust {
+  width: 200px;
+  height: 30px;
+}
+label {
+  margin-bottom: 10px;
+}
+button {
+  margin-top: 20px;
+}
+
+#Total {
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+/*base on page 271*/
+#addToHomeScreen {
+  display: block;
+  margin-top: 20px;
+  padding: 0px;
+  display: none;
+}
+#addToHomeScreen img {
+  max-width: 57px;
+  margin: 10px;
+  float: left;
+}
+#addToHomeScreen button {
+  background-color: #264de4;
+  color: white;
+  border: 1px #2965f1 solid;
+  margin: 5px 10px;
+}
+
+/* base on page 286*/
+
+#instructions {
+  text-align: center;
+  background-color: #f2f4f4;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  left: 20px;
+  width: calc(100%-40px);
+  padding: 0px 10px 10px 10px;
+
+  display: none;
+}
+#instructions img {
+  max-width: 64px;
+}
+#instructions button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #264de4;
+  color: white;
+  border: 1px #2965f1 solid;
+}
+
+
+
+/*traget change size ipad*/
+@media screen and (max-width: 900px) {
+  .bigHero {
+    width: 100%;
+    height: 30vh;
+  }
+  /*container is a big box -control right box and leftbox*/
+  .container {
+    flex-wrap: wrap; /*make extra box move to the next line*- it belong to display flex*/
+    flex-direction: column-reverse; /*colume reverse use for switch bottom box to the top instead */
+  }
+  .section1Leftside {
+    width: 100%;
+    padding: 30px 0px;
+  }
+  .section2Rightside {
+    width: 100%;
+    padding: 30px 0px;
+  }
+  .section2Rightside h2 {
+    margin-bottom: 10px;
+  }
+  .bigHero h1 {
+    margin-left: 450px;
+    line-height: 250px;
+    padding: 10px; /* top right bottom left*/
+    text-align: center;
+  }
+}
+/*iphone*/
+@media screen and (max-width: 500px) {
+  .section1Leftside {
+    width: 100%;
+    padding: 30px 0px;
+  }
+  .mainBox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .pizzaBox {
+    width: 100px;
+    height: auto;
+    text-align: center;
+  }
+
+  .pizzaBox img {
+    width: 100px;
+    height: 100px;
+  }
+  .topping {
+    margin: 20px 0px;
+  }
+
+  #crust {
+    position: relative;
+  }
+  .moveBoxDown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: red;
+  }
+
+  .bigHero {
+    width: 100%;
+    height: 40vh;
+    background-image: url('image/bigHeroPizza2.jpg');
+    background-size: cover;
+    background-position: center left;
+  }
+
+  .bigHero h1 {
+    margin-left: 0px;
+    padding: 20px; /* top right bottom left*/
+    background-color: white;
+    line-height: 20px;
+    text-align: center;
+    font-size: 25px;
+  }
+  .section2Rightside {
+    padding-bottom: 30px;
+  }
+}
+

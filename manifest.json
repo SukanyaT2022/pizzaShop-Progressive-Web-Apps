@@ -1,0 +1,16 @@
+{
+  "name": "Pizza Shop",
+  "short_name": "",
+  "icons": [
+    {
+      "src": "android-chrome-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "",
+  "theme_color": "#1E8449",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "gcm_sender_id": "833418004732"
+}

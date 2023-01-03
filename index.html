@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--base on page 271-->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+    <!--page 298-->
+    <link rel="apple-touch-startup-image" href="./apple-splash-640.png" media="(device-width:
+    320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-750.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-1242.png"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-1125.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-1536.png"
+        media="(min-device- width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-1668.png"
+        media="(min-device- width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./apple-splash-2048.png"
+        media="(min-device- width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+
+
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1E8449 ">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza Store</title>
+    <script src="main.js"></script>
+
+</head>
+
+
+<body>
+    <div class="bigHero">
+        <h1>Naples Pizza Shop</h1>
+
+    </div>
+
+    <div class="container">
+
+        <div class="section1Leftside">
+            <h2>Pizza Crust</h2>
+            <!--make drop down menu and select option-->
+            <select id="crust">
+                <option class="moveBoxDown" value="1">Thin crust</option>
+                <option class="moveBoxDown" value="1">Cheese crust</option>
+                <option class="moveBoxDown" value="1">Fresh pan</option>
+            </select>
+            <!--end dropdown menu-->
+            <h2 class="toppingOrderside">Topping</h2>
+            <!--give the same name but value is different-->
+            <!--for checkbox name="topping" use same name for easy purpose for select multiple value
+a *****person can check multiple value from the group-- 
+use the same name for easy to find out from the group which group so we know it's topping group-->
+
+            <input type="checkbox" name="topping" value="Olive"> <label>Olive</label>
+            <input type="checkbox" name="topping" value="Jalapenos"><label>Jalapeño</label>
+            <input type="checkbox" name="topping" value="extra-cheese"><label>Extra Cheese</label>
+
+            <br>
+            <label>Quantity</label><input type="text" id="quantityBox">
+            <button onclick="placeOrder()">Place Order</button>
+            <p id="Total"></p>
+
+        </div>
+
+
+        <!--section2 on right side//menu-->
+        <div class="section2Rightside">
+            <h2>Menu</h2>
+
+            <div class="mainBox">
+                <div class="pizzaBox">
+                    <img src="image/thinCrustPizza.jpg">
+                    <h3>Thin Crust Pizza</h3>
+                    <p>$75</p>
+                </div>
+
+                <div class="pizzaBox">
+                    <img src="image/cheeseCrust.jpg">
+                    <h3>Cheese Crust</h3>
+                    <p>$120</p>
+                </div>
+
+
+                <div class="pizzaBox">
+                    <img src="image/flatBreadPizza.jpg">
+                    <h3>Fresh Pan</h3>
+                    <p>$100</p>
+                </div>
+
+            </div>
+            <!--end main Box-->
+
+            <!--start topping-->
+
+            <h2 class="topping">Topping</h2>
+
+            <div class="mainBox">
+                <div class="pizzaBox">
+                    <img src="image/olive.jpg">
+                    <h3>Olive</h3>
+                    <p>$5</p>
+
+                </div>
+
+                <div class="pizzaBox">
+                    <img src="image/jalapeno.jpg">
+                    <h3>Jalapeño</h3>
+                    <p>$5</p>
+                </div>
+
+
+                <div class="pizzaBox">
+                    <img src="image/cheese.jpg">
+                    <h3>Extra Cheese</h3>
+                    <p>$5</p>
+                </div>
+
+            </div>
+            <!--end topping-->
+
+
+        </div>
+    </div>
+    <section id="addToHomeScreen">
+        <h1>Install App</h1>
+        <img src="android-chrome-96x96.png" alt="NCC CS" />
+        Add our app to your home screen? <br />
+        <a href="javascript:void(0)" onClick="hidePrompt()" style="text-decoration:none;">No, Thanks</a>
+        <button onClick="installApp()">Yes, Please!</button>
+    </section>
+
+    <!---based on page286-->
+
+    <div id="instructions">
+        <button onClick="hideInstructions()">X</button>
+        <p>
+            <img src="apple-touch-icon.png" alt="icon" />
+        </p>
+        <p>
+            Install our app on your Home Screen for Quick Access. </p>
+        <p>
+            Tap <img src="./image/olive.jpg" alt="share" /> then <img src="./image/cheeseCrust.jpg" alt="Add To Home Screen" /> </p>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+</html>
